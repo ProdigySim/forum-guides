@@ -1,30 +1,31 @@
-I was thinking about doing some sort of tutorial for this after being asked about my render process, but most of my process is pretty irrelevant and it differs from most other editors in the community. So, I''m just going to highlight the main few things you can do to improve your video quality.
+or "5 Tips for Better Video Quality"
 
+I didn't have time to spice this up but I figured it was worth reposting.
 
-[COLOR="#FFFFFF"][SIZE=4][B]1. Turn off mat_monitorgamma_tv_enabled when recording[/B][/SIZE][/COLOR]
+[COLOR=white][SIZE=4][B]1. Turn off mat_monitorgamma_tv_enabled when recording[/B][/SIZE][/COLOR]
 This isn''t a huge deal, but might help keep your videos from looking washed out. I add gamma in post to pretty much every video I make, but this is a pretty standard practice when doing video editing anyway. Try to get as realistic of a source as possible and add more junk in post.
 
-[COLOR="#FFFFFF"][SIZE=4][B]2. Disable frame resampling![/B][/SIZE][/COLOR]
+[COLOR=white][SIZE=4][B]2. Disable frame resampling![/B][/SIZE][/COLOR]
 When you render/encode your video and send it to youtube, you only need 30fps. If you have source footage with a higher framerate, you''ll need to convert it to 30fps somehow. By default, most video editors will "resample" your video, blending frames together to get 30fps. This can sometimes make footage look good, but most often you''re going to lose sharpness/detail on your video as a result. BRB BOWFLEXIN` makes some really good videos that use frame-blend resample. purple and mason generally use drop-frame conversion for pretty vids.
 
 IMO, the best option is to simply use a drop-frame framerate conversion instead. This is done in Sony Vegas by disabling resampling.
-[url=http://www.youtube.com/watch?v=k6kNAd40Nfo]Vegas Resample disabling Tutorial[/url]
+[url="http://www.youtube.com/watch?v=k6kNAd40Nfo"]Vegas Resample disabling Tutorial[/url]
 
 Pause at random points during these two videos and you will see the difference: (Sorry I don''t have equivalent comparison videos)
-[url=http://www.youtube.com/watch?v=ROF_xqK4CnI]720p with frame-blend resampling[/url]
-[url=http://www.youtube.com/watch?v=ycVTlXCCMlk]720p with no resampling (drop frame)[/url]
+[url="http://www.youtube.com/watch?v=ROF_xqK4CnI"]720p with frame-blend resampling[/url]
+[url="http://www.youtube.com/watch?v=ycVTlXCCMlk"]720p with no resampling (drop frame)[/url]
 As you can see, the frame blending looks far less sharp. (TODO: Add a good comparison video)
 
-[COLOR="#FFFFFF"][SIZE=4][B]3. Make your final video 1920x1072[/B][/SIZE][/COLOR]
+[COLOR=white][SIZE=4][B]3. Make your final video 1920x1072[/B][/SIZE][/COLOR]
 So, this is an odd one. If you''re uploading to youtube, 1920x1072 comes out WAY better than 1920x1080. There''s a note about it on some support docs somewhere, but it''s hard to find.
 Check these out:
-[url=http://i.imgur.com/twiqQ.jpg]This image[/url] is from a 1920x1080 video uploaded to youtube. ([url=http://www.youtube.com/watch?v=eeBax8yw6fM]Source[/url])
-[url=http://i.imgur.com/EQH0L.jpg]This image[/url] is from the same video, but 4 pixels were taken off the top and the bottom (total of 8 taken off) of the video before it was uploaded. Much clearer. ([url=http://www.youtube.com/watch?v=lxixXwX1VWI]Source[/url])
+[url="http://i.imgur.com/twiqQ.jpg"]This image[/url] is from a 1920x1080 video uploaded to youtube. ([url="http://www.youtube.com/watch?v=eeBax8yw6fM"]Source[/url])
+[url="http://i.imgur.com/EQH0L.jpg"]This image[/url] is from the same video, but 4 pixels were taken off the top and the bottom (total of 8 taken off) of the video before it was uploaded. Much clearer. ([url="http://www.youtube.com/watch?v=lxixXwX1VWI"]Source[/url])
 
 This likely has something to do with their encoder splitting the image up into 16x16 chunks. Since 1080 isn''t divisible by 16, it may be squeezing the image in some way or another for some part of the encode *shrug*
 
 Also, using 1080p instead of 720p is preferrable. I''ve always been somewhat dissatisfied with the quality when I upload 720p videos--I feel like maybe youtube makes better 720p encodes when you upload a 1080p video. Shrug again.
-[COLOR="#FFFFFF"]
+[COLOR=white]
 [SIZE=4][B]4. Add motion blur if possible.[/B][/SIZE][/COLOR]
 When I was working on amalgam, I was testing out a bunch of different rendering/encoding options. I tested out different motion blur settings using a constant quality encode with x264 (actually --crf 18). As I turned up motion blur settings and used more sensitive motion blurs, the bitrate of the output video decreased. The motion blur was actually *simplifying* the video for the encoder.
 
@@ -32,11 +33,11 @@ Motion Blur has a dual purpose. Yes, it looks cool/pretty, but it also makes the
 
 So, tl;dr there: Adding motion blur will let Youtube''s encoder preserve your video''s quality better.
 
-There''s some free motion blur available like MVTools, but the best quality motion blur is hands-down [url=http://www.revisionfx.com/products/rsmb/]ReelSmart Motion Blur[/url]. It''s available for Sony Vegas 10+, After Effects, and many other editors. I use its default settings, and it really makes great looking motion blur. 
+There''s some free motion blur available like MVTools, but the best quality motion blur is hands-down [url="http://www.revisionfx.com/products/rsmb/"]ReelSmart Motion Blur[/url]. It''s available for Sony Vegas 10+, After Effects, and many other editors. I use its default settings, and it really makes great looking motion blur. 
 
 Just a warning, adding motion blur WILL increase your render/encode times by a large amount. I like to add RSMB to my vegas projects via Track FX, so I can toggle it on and off easily before I do renders.
 
-[COLOR="#FFFFFF"][SIZE=4][B]5. Do the highest quality encode you can stand to wait for.[/B][/SIZE][/COLOR]
+[COLOR=white][SIZE=4][B]5. Do the highest quality encode you can stand to wait for.[/B][/SIZE][/COLOR]
 I''ve messed around with a bunch of encode settings--trying to mimic Youtube''s encodes, various profiles, etc. There''s no magic bullet here. Youtube *WILL* re-encode your video no matter what. So, just try to create the highest quality input for it to work with. Giving it a lower quality encode doesn''t really help at all.
 
 My personal workflow is something like the following:
@@ -54,6 +55,8 @@ I can do some more in-depth guides on any of these topics if people have interes
 GL HF
 
 [B][SIZE=4]Examples: Resampling Options and Motion Blur[/SIZE][/B]
-[video=youtube;_acD6C7MzDQ]http://www.youtube.com/watch?v=_acD6C7MzDQ[/video]
+http://www.youtube.com/watch?v=_acD6C7MzDQ
 Uploaded at 1920x1072. The source video was full 1080p @ 60fps. You can decide for yourself which style looks best. YMMV.
-See Also: [url=http://www.youtube.com/watch?v=_JC0wdC3QrU]720p[/url] [url=http://www.youtube.com/watch?v=SosZnDGCk5w]1080p[/url]
+See Also: [url="http://www.youtube.com/watch?v=_JC0wdC3QrU"]720p[/url] [url="http://www.youtube.com/watch?v=SosZnDGCk5w"]1080p[/url]
+
+[COLOR=white][B]Added bonus![/B][/COLOR] - [url="http://imgur.com/a/lKqel"]Basic Vegas project/render settings + my x264 settings from megui[/url]
